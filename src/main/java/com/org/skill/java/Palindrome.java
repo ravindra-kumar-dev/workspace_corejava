@@ -8,6 +8,9 @@ public class Palindrome {
     }
 
     public static boolean isPalindromeV2(String word) {
+        if(word == null || word.length() == 0) {
+            throw new IllegalArgumentException("Not Valid argument");
+        }
         StringBuilder sb = new StringBuilder();
         for(int i = word.length()-1; i >=0; i--) {
             sb.append(word.charAt(i));
