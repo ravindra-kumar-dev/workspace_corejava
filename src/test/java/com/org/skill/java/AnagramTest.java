@@ -7,6 +7,27 @@ import static org.junit.Assert.*;
 public class AnagramTest {
 
     @Test
+    public void testIsAnagramV3() {
+        assertTrue(Anagram.isAnagramV3("listen", "silent"));
+        assertTrue(Anagram.isAnagramV3("abcdcba", "cbadcba"));
+    }
+
+    @Test
+    public void testIsAnagramV3False() {
+        assertFalse(Anagram.isAnagramV3("Ravindra", "Rajiv"));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testIsAnagramV3NullEmpty() {
+        Anagram.isAnagramV3(null,  "");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testIsAnagramV3NullNull() {
+        Anagram.isAnagramV3(null,  null);
+    }
+
+    @Test
     public void testIsAnagramV2() {
         assertTrue(Anagram.isAnagramV2("listen", "silent"));
     }
