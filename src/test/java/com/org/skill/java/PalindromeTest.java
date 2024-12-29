@@ -16,6 +16,18 @@ public class PalindromeTest {
        System.out.println("before");
    }
 
+   @Test(expected = IllegalArgumentException.class)
+   public void testPalindromeEmpty() throws IllegalArgumentException{
+      System.out.println("testcase for Empty palindrome");
+      Palindrome.isPalindrome("");
+   }
+
+   @Test(expected = IllegalArgumentException.class)
+   public void testPalindromeNull() throws IllegalArgumentException{
+      System.out.println("testcase for null palindrome");
+      Palindrome.isPalindrome(null);
+   }
+
    @Test
     public void testIsPalindrome() {
        System.out.println("testcase for isPalindrome");
