@@ -2,6 +2,9 @@ package com.org.skill.java;
 
 public class RemoveLeadingZero {
 
+    public static String removeLeadingZeroV3(String value) {
+       return value.replaceAll("^0*","");
+    }
 
     public static String removeLeadingZeroV2(String value) {
          try {

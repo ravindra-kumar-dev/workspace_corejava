@@ -8,6 +8,15 @@ import static org.junit.Assert.assertNotEquals;
 public class RemoveLeadingZeroTest {
 
     @Test
+    public void testRemoveLeadingZeroV3() {
+        assertEquals("456", RemoveLeadingZero.removeLeadingZeroV3("456"));
+        assertEquals("456000", RemoveLeadingZero.removeLeadingZeroV3("456000"));
+        assertEquals("456000", RemoveLeadingZero.removeLeadingZeroV3("00000456000"));
+        assertEquals("40506000", RemoveLeadingZero.removeLeadingZeroV3("0000000040506000"));
+        assertNotEquals("405", RemoveLeadingZero.removeLeadingZeroV3("00000000450"));
+    }
+
+    @Test
     public void testRemoveLeadingZeroV2() {
         assertEquals("456000", RemoveLeadingZero.removeLeadingZeroV2("456000"));
         assertEquals("456000", RemoveLeadingZero.removeLeadingZeroV2("00000456000"));
