@@ -2,6 +2,17 @@ package com.org.skill.java;
 
 public class CreditCardValidation {
 
+    /**
+     Luhn check or the mod 10 check for credit card validation
+     1.) A credit card’s number must have 13 to 16 digits
+     2.) All the visa cards start from 4
+     3.) All the master cards start from 5
+     4.) 37 is the starting for American express cards
+     5.) All the discover cards start from 6
+     6.) Double and Sum of all even digit number (if sum is tow digit number then again sum it's digit and get single digit number)
+     7.) Sum of all odd digit number
+     8.) find the sum of number from result 6.) and 7.), if it's divisible by 10 then it's valid Credit card number else in valid
+     */
     private static final int CREDIT_CARD_MIN_LENGTH = 13;
     private static final int CREDIT_CARD_MAX_LENGTH = 16;
 
